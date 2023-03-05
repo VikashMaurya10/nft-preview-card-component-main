@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+// ### Primary
+$Soft-blue: hsl(215, 51%, 70%);
+$Cyan: hsl(178, 100%, 50%);
+$Overlay: hsla(178, 100%, 50%, 0.38);
+
+// ### Neutral
+$bg-dark-blue : hsl(217, 54%, 11%); //(main BG)
+$card-bg-dark-blue : hsl(216, 50%, 16%); //(card BG)
+$Very-dark-blue : hsl(215, 32%, 27%); //(line)
+$White: hsl(0, 0%, 100%);
+
+$fs-lg: 18px;
+$fs-md: 16px;
+$fs-sm: 14px;
+$fw-light: 300;
+$fw-regular: 400;
+$fw-semiBold: 600;
+
+*::after,
+*,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $bg-dark-blue;
+    font-family: 'Outfit', sans-serif;
+}
+
+h1 {
+    color: $White;
+    font-weight: $fw-semiBold;
+    font-size: $fs-lg;
+    width: fit-content;
+}
+
+p {
+    color: $Soft-blue;
+    font-weight: $fw-light;
+    font-size: $fs-md;
+    line-height: 1.3;
+}
+
+.hover {
+    &:hover {
+        transition: color 0.2s ease-in-out;
+        color: $Cyan !important;
+    }
+}
+
+.d-f {
+    display: flex;
+}
+
+.ai-c {
+    align-items: center;
+}
+
+.jc-sb {
+    justify-content: space-between;
+}
+
+.b {
+    border: 1px solid red;
+}

@@ -1,0 +1,23 @@
+@media (max-width:425px) {
+    main {
+        .nft-card {
+            width: 327px;
+            height: 543px;
+
+            &__about {
+                >p {
+                    margin-top: 1.5rem; // 24px;
+                }
+
+                .price-section {
+                    margin-top: 1.5rem;
+                }
+
+                .price-section,
+                hr {
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+    }
+}

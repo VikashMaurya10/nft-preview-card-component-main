@@ -1,0 +1,109 @@
+main {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+
+    .nft-card {
+        width: 349px;
+        height: 597px;
+        padding: 1.5rem; //24px
+        background-color: $card-bg-dark-blue;
+        border-radius: 10px;
+
+        &__image {
+            position: relative;
+            background: no-repeat center / cover url("../assets/images/image-equilibrium.jpg");
+            height: 55%;
+            border-radius: 10px;
+
+            &::before {
+                content: '';
+                position: absolute;
+                background: no-repeat center/cover url("../../assets/images/icon-view.svg");
+                height: 16%;
+                width: 16%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                opacity: 0;
+            }
+
+            &:hover {
+                background-blend-mode: overlay;
+                background: no-repeat center/contain url("../assets/images/image-equilibrium.jpg") $Overlay;
+                cursor: pointer;
+                transition: background 0.3s ease-in-out;
+
+                &::before {
+                    opacity: 1;
+                    transition: opacity 0.2s ease-in-out;
+
+                }
+            }
+        }
+
+        &__about {
+            margin-top: 1.5rem;
+
+            >p {
+                margin-top: 1.8125rem; // 29px;
+            }
+
+            .price-section {
+                margin: 1.8125rem 0;
+
+                p {
+                    font-size: $fs-sm;
+                    gap: 5px;
+                }
+
+                span {
+                    width: 20px;
+                    aspect-ratio: 1/1;
+                }
+
+                .price {
+                    color: $Cyan;
+                    font-weight: $fw-semiBold;
+
+                    span {
+                        background: no-repeat center/contain url("../assets/images/icon-ethereum.svg");
+                    }
+
+                }
+
+                .time {
+                    span {
+                        background: no-repeat center/contain url("../../assets/images/icon-clock.svg");
+                    }
+                }
+
+            }
+
+            hr {
+                border: 1px solid $Very-dark-blue;
+            }
+
+            .author {
+                display: flex;
+                align-items: center;
+                margin-top: 1rem;
+                gap: 1rem;
+
+                img {
+                    width: 2.1rem;
+                    aspect-ratio: 1/1;
+                    border: 3px solid $White;
+                    border-radius: 50%;
+                }
+
+                p {
+                    span {
+                        color: $White;
+                        font-weight: $fw-regular;
+                    }
+                }
+            }
+        }
+    }
+}
